@@ -15,37 +15,37 @@ PyPDF2 is a pure-python PDF library capable of splitting, merging together, crop
 
 ### Breaking the code
 
-importing required modules 
+Importing required modules 
 ```python  
 import PyPDF2  
 ```
 
-creating a pdf file object  
+Creating a pdf file object  
 ```python
 pdfFileObj = open('file location', 'rb')  #Replace file location
 ```
 
-creating a pdf reader object 
+Creating a pdf reader object 
 ```python
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)  
 ```
 
-printing number of pages in pdf file  
+Printing number of pages in pdf file  
 ```python
 print(pdfReader.numPages)
 ```
     
-creating a page object  
+Creating a page object  
 ```python
 pageObj = pdfReader.getPage(0) 
 ```
    
-extracting text from page  
+Extracting text from page  
 ```python
 print(pageObj.extractText())
 ```
     
-losing the pdf file object  
+Closing the pdf file object  
 ```python
 pdfFileObj.close()
 ```
